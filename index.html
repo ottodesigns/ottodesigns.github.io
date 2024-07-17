@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Volpe Air</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/zon4udc.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav>
+  <div class="top-nav" id="myTopnav">
+    <img class="logo" href="index.html" src="images/volpeair_logo.png" alt="Volpe Air Logo">
+    <a href="#" class="nav-item active">Book</a>
+    <a href="#" class="nav-item">Travel Info</a>
+    <a href="#" class="nav-item">Discover</a>
+    <a href="#" class="nav-item">VolpeMiglia</a>
+    <a href="#" class="nav-item">Our Airline</a>
+    <div class="buttons-container">
+      <a href="#" class="button">Log In</a>
+      <a href="#" class="button">Sign Up</a>
+    </div>
+    <a href="javascript:void(0);" class="navbar-toggle" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero-img">
+  <div class="headline">Let your <span class="orange">Italian</span> adventure come true</div>
+  <div class="tab-container">
+    <div class="tab">
+      <button class="tablinks" onclick="openPage(event, 'Book')" id="defaultOpen"><img src="/images/volpeair_icon1.png" alt=""><br>Book a flight</button>
+      <button class="tablinks" onclick="openPage(event, 'CheckIn')"><img src="/images/volpeair_icon2.png" alt=""><br>Check-In</button>
+      <button class="tablinks" onclick="openPage(event, 'Status')"><img src="/images/volpeair_icon3.png" alt=""><br>Flight Status</button>
+    </div>
+
+    <!-- Book -->
+    <div id="Book" class="tabcontent">
+      <h4>Where would you like to go?</h4>
+      <form action="#" id="form">
+        <div class="row">
+          <div class="radio-container">
+            <input type="radio" id="round-trip" name="trip" value="Enable" class="radio-label" checked>
+            <label for"round-trip" class="radio-label">Round trip</label>
+            <input type="radio" id="one-way" name="trip" value="Disable">
+            <label for"one-way" class="radio-label">One way</label>
+            <a href="#" class="link" style="float:right">&raquo; Advanced search</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <label for="from">From</label>
+            <input type="text" id="from" name="from" placeholder="City or Airport">
+          </div>
+          <div class="col-2">
+            <label for="to">To</label>
+            <input type="text" id="to" name="to" placeholder="City or Airport">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+            <label for="departure">Departure</label>
+            <input type="date" id="departure" name="departure">
+          </div>
+          <div class="col-2">
+            <label for="return" class="return">Return</label>
+            <input type="date" id="return" name="return" class="return">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+            <label for="travelers">Travelers</label>
+            <input type="number" id="travelers" name="travelers" value="1" min="1" max="20">
+          </div>
+          <div class="col-2">
+            <label>&nbsp;</label>
+            <input type="submit" value="Search" class="btn">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Check-In -->
+    <div id="CheckIn" class="tabcontent">
+      <h4>Check-In for your Flight</h4>
+      <form action="#" id="form">
+        <div class="row">
+          <div class="col-2">
+            <label for="paxfirst">Passenger first name</label>
+            <input type="text" id="paxfirst" name="paxfirst" placeholder="John">
+          </div>
+          <div class="col-2">
+            <label for="paxlast">Passenger last name</label>
+            <input type="text" id="paxlast" name="paxlast" placeholder="Doe">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+              <label for="confirmation-code">Confirmation Code</label>
+              <input type="text" id="confirmation-code" name="Confirmation-code" placeholder="ex. ABCDEF">
+          </div>
+          <div class="col-2">
+            <label>&nbsp;</label>
+            <input type="submit" value="Search" class="btn">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Flight Status -->
+    <div id="Status" class="tabcontent">
+      <h4>Where is my plane?</h4>
+      <form action="#" id="form">
+        <div class="row">
+          <div class="col-2">
+            <label for="from-flight">To</label>
+            <input type="text" id="from-flight" name="from-flight" placeholder="City or Airport">
+          </div>
+          <div class="col-2">
+            <label for="to-flight">From</label>
+            <input type="text" id="to-flight" name="to-flight" placeholder="City or Airport">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+              <label for="date-flight">Date</label>
+              <input type="date" id="date-flight" name="date-flight" class="date-flight">
+          </div>
+          <div class="col-2">
+            <label>&nbsp;</label>
+            <input type="submit" value="Search" class="btn">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div> <!-- tab-container -->
+</div> <!-- hero-image -->
+
+<!-- main content -->
+<div class="main-container">
+  <h1>Popular Destinations from the US</h1>
+  <div class="cards-container">
+
+    <!-- Destination 1 -->
+    <div class="col-3">
+      <div class="card">
+        <img src="/images/venice.jpg" style="width:100%">
+        <div class="card-content">
+          <h2 style="color: #fff">Flights to</h2>
+          <hr class="solid">
+          <h1 style="color: #fff">VENICE</h1>
+          <a href="#" class="card-links">&raquo; book now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Destination 2 -->
+    <div class="col-3">
+      <div class="card">
+        <img src="images/rome.jpg" style="width:100%">
+        <div class="card-content">
+          <h2 style="color: #fff">Flights to</h2>
+          <hr class="solid">
+          <h1 style="color: #fff">ROME</h1>
+          <a href="#" class="card-links">&raquo; book now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Destination 3 -->
+    <div class="col-3">
+      <div class="card">
+        <img src="/images/florence.jpg" style="width:100%">
+        <div class="card-content">
+          <h2 style="color: #fff">Flights to</h2>
+          <hr class="solid">
+          <h1 style="color: #fff">FLORENCE</h1>
+          <a href="#" class="card-links">&raquo; book now</a>
+        </div>
+      </div>
+    </div>
+  </div> <!-- card-container -->
+</div> <!-- main-container -->
+
+<!-- VolpeMiglia Ad -->
+<div class="ad-pattern">
+  <div class="ad-img">
+    <div class="ad-container">
+      <img class="volpemiglia" href="index.html" src="images/volpemiglia-logo-color.png" alt="Volpe Miglia Logo">
+      <h1>More options. More miles.<h1>
+      <p>Join now, earn 1,000 welcome miles and discover numerous reasons to be a <em>VolpeMiglia</em> member.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Newsletter -->
+<form class="form-inline" action="#">
+  <label for="email">Newsletter</label>
+  <input type="email" id="email" placeholder="Enter email" name="email">
+  <button type="submit" class="button-newsletter">Subcribe</button>
+</form>
+<!-- footer -->
+<div class="footer-background">
+  <div class="footer-container">
+    <div class="footer-nav">
+      <div class="col-4" style="align-self: center">
+        <img src="/images/volpeair_logo-gray.png" class="logo-footer">
+      </div>
+      <div class="col-4">
+        <h3>About Volpe Air</h3>
+        <a href="#">Our company</a><br>
+        <a href="#">Our planes</a><br>
+        <a href="#">Our partner airlines</a><br>
+        <a href="#">Customer commitment</a><br>
+        <a href="#">Careers &#8599;</a><br>
+        <a href="#">Press room &#8599;</a><br>
+        <a href="#">Blog &#8599;</a><br>
+        <a href="#">Contact us</a><br>
+      </div>
+      <div class="col-4">
+        <h3>Site Support</h3>
+        <a href="#">Login help</a><br>
+        <a href="#">Site map</a><br>
+        <a href="#">Accessibility</a><br>
+        <a href="#">Legal</a><br>
+        <a href="#">Cookies, privacy, & security</a><br>
+        <a href="#">Website feedback</a><br>
+      </div>
+      <div class="col-4">
+        <h3>Stay Connected</h3>
+        <a href="#"><i class="fa fa-download"></i>Download the Volpe Air app</a><br>
+        <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
+      </div>
+    </div>
+  </div><!-- footer nav -->
+</div>
+<footer>
+  <div class="copyright">
+    <div class="left">
+    <div class="float-left"><p>&#8599;  Link opens in new window. Site may not meet accessibility guidelines.</p>
+  </div></div>
+  <div class="right">
+    <p>© 2020 Volpe Airlines</p>
+  </div>
+</div>
+</footer>
+
+
+
+
+
+<!-- mobile nav -->
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "top-nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "top-nav";
+  }
+}
+</script>
+
+<!-- form -->
+<script>
+function openPage(evt, pageName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(pageName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+<!-- Removes arrival when cliced on one way -->
+<script>
+$(document).ready(function() {
+  $(".return").attr('disabled', false);
+  $("form input:radio").change(function() {
+    if ($(this).val() == "Disable") {
+      $(".return").attr('checked', false);
+      $(".return").attr('disabled', true);
+      $(".return").css('opacity', '.10');
+    }
+    else {
+      $(".return").attr('disabled', false);
+      $(".return").css('opacity', '1');
+    }
+  });
+});
+</script>
+</body>
+</html>
