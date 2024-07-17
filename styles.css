@@ -1,0 +1,613 @@
+/*------------------------- Comments -------------------------*/
+/* Brand Colors
+Fox Orange #f7941d
+Air Blue #27aae1
+Gray #676767
+*/
+
+/*------------------------- General -------------------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: ingra, Arial, Helvetica, sans-serif;
+}
+p {
+  font-family: ingra, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+}
+a {
+  font-family: ingra, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+h1 {
+  font-family: ingra, sans-serif;
+  color: #f7941d;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 1.6;
+}
+h2 {
+  font-family: ingra, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.6;
+}
+h3 {
+
+}
+h4 {
+  font-family: igra, sans-serif;
+  padding: 0 0 10px 15px;
+  color: #fff;
+}
+.main-container {
+  overflow: hidden;
+  background-color: fff;
+  padding: 20px 40px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.col-1 {
+  flex: 100%;
+  padding: 0 16px;
+}
+.col-2 {
+  flex: 50%;
+  padding: 0 16px;
+}
+.col-3 {
+  float: left;
+  width: 33.3%;
+  padding: 10px 10px;
+}
+.col-4 {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
+}
+
+/*------------------------- Navigation -------------------------*/
+nav {
+  overflow: hidden;
+  background-color: fff;
+  /* border-bottom: 4px #f7941d solid; */
+  display: block;
+  position: relative;
+}
+.top-nav {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo {
+  float: left;
+  display: block;
+  height: 40px;
+  margin: 10px 20px;
+}
+.nav-item {
+  display: inline-block;
+  font-size: 16px;
+  color: #676767;
+  text-align: center;
+  margin: 0;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+.nav-item:hover {
+  background-color: none;
+  color: #f7941d;
+}
+nav .active {
+  background-color: #none;
+  font-weight: 700;
+  color: #f7941d;
+  border-bottom: 4px #f7941d solid;
+}
+.buttons-container {
+  float:right;
+  margin-right: 20px;
+}
+.button {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  background-color: #f7941d;
+  text-align: center;
+  margin: 12px 5px;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover {
+  filter: brightness(95%);
+}
+.navbar-toggle {
+  display: none;
+}
+
+/* Mobile Nav */
+@media screen and (max-width: 950px) {
+  .top-nav a {
+    display: none;
+  }
+  .top-nav .navbar-toggle {
+    color: #f7941d;
+    font-size: 24px;
+    margin: 5px;
+    display: block;
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .logo {
+    float: none;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav-item {
+    float: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  nav .active {
+    border-bottom: none;
+  }
+  .buttons-container {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  .buttons-container:hover {
+    float: none;
+    display: inline-block;
+    text-align: center;
+  }
+  .button {
+    color: #676767;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+    background-color: inherit;
+    font-size: inherit;
+  }
+  .button:hover {
+    background-color: none;
+    color: #f7941d;
+  }
+  .top-nav.responsive {
+    position: relative;
+  }
+  .top-nav.responsive .navbar-toggle {
+    position: absolute;
+    right: 10px;
+    top: 0;
+  }
+  .top-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+/*------------------------- Hero -------------------------*/
+.hero-img {
+  background-image: url("/images/volpeair_plane1.jpg");
+  background-color: #fff;
+  min-height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.headline {
+  display: none;
+}
+/* Search Tabs */
+.tab-container {
+  position: absolute;
+  left: 0;
+  margin: 10px;
+  min-width: 400px;
+  padding: 0;
+  background-color: rgba(247,148,29,0.9);
+  border: none;
+}
+.tab {
+  overflow: hidden;
+  background-color: #27aae1;
+  border: none;
+}
+.tablinks {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tab img {
+  height: 20px;
+}
+.tab button {
+  color: #fff;
+  background-color: inherit;
+  float: left;
+  border: 1px;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  transition: 0.3s;
+  width: 33.3%;
+  box-shadow: 0px 0px 0px 1px rgba(255,255,255,.5);
+}
+.tab button:hover {
+  background-color: #f7941d;
+}
+.tab button.active {
+  background-color: #f7941d;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 20px 10px;
+  border: none;
+}
+/* Search Tabs Content */
+input[type="text"], [type="number"], [type="date"], [type="email"] {
+  font-family: ingra;
+  font-size: 12px;
+  color: #676767;
+  width: 100%;
+  margin-bottom: 2px;
+  padding: 10px;
+  border: none;
+}
+label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: block;
+}
+.radio-label {
+  float: left;
+  clear: none;
+  display: block;
+  padding: 0px 1em 0px 8px;
+  margin: 0 5px 5px 0;
+}
+
+input[type=radio] {
+  float: left;
+  clear: none;
+  margin: 3px 0 0 15px;
+}
+
+.btn {
+  font-family: ingra;
+  font-size: 16px;
+  color: #fff;
+  background-color: #27aae1;
+  width: 100%;
+  margin-bottom: 2px;
+  padding: 7px;
+  border: 1px solid rgba(255,255,255,0.7);
+  cursor: pointer;
+}
+.btn:hover {
+  filter: brightness(90%);
+  color: #fff;
+}
+
+.link {
+  color: #fff;
+}
+
+@media screen and (min-width: 900px) {
+  .headline {
+    color: #fff;
+    font-size: 30px;
+    display: block;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .orange {
+    color: #f7941d;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tab-container {
+    position: absolute;
+    left: 0;
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-width: 400px;
+    padding: 0;
+    background-color: rgba(247,148,29,0.9);
+    border: none;
+  }
+}
+/*--------------------- Destinations Cards ---------------------*/
+.cards-container {
+  max-width: 1000px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card {
+  background-color: #f7941d;
+  max-width: 300px;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  background-image: url("/images/volpeair_pattern.png");
+  background-size: 250%;
+  background-blend-mode: soft-light;
+  background-position: center;
+}
+.card-content h1, h2 {
+  text-align: left;
+}
+.solid {
+  background-color: #fff;
+  height: 2px;
+  border: none;
+  margin: 2px 0;
+}
+.card-links {
+  color: #fff;
+
+}
+.cards-container:after {
+  content: "";
+  display: table;
+  clear; both;
+}
+.card-content {
+  padding: 20px 30px 40px 30px;
+  text-align: right;
+}
+
+@media screen and (max-width: 700px) {
+  .col-3 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+/*--------------------- VolpeMiglia Ad ---------------------*/
+
+.ad-pattern {
+  background-image: url("/images/volpaair_pattern.png");
+  background-position: center;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.ad-img {
+  background-image: url("/images/italian-beach-overlay.jpg");
+  background-color: #27aae1;
+  min-height: 350px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  position: relative;
+}
+.volpemiglia {
+  height: 120px;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, .8);
+  border: 2px solid #f7941d;
+  border-radius: 10px;
+}
+.ad-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  margin: 20px 0 0 20px;
+}
+.ad-container h1 {
+  color: #fff;
+  font-size: 24px;
+}
+.ad-container p {
+  color: #fff;
+  font-size: 14px;
+
+}
+/*--------------------- Newsletter ---------------------*/
+.form-inline {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px, 0;
+  margin: 0;
+}
+.form-inline label {
+  font-size: 18px;
+  color: #676767;
+  font-weight: 700;
+  text-align: none;
+  margin: 5px 15px 5px 0;
+}
+.form-inline input {
+  width: 40%;
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #676767;
+}
+,form-inline input [type="email"] {
+  font-size: 14px;
+  color: red;
+}
+.button-newsletter {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  background-color: #f7941d;
+  text-align: center;
+  margin: 12px 0;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button-newsletter:hover {
+  filter: brightness(95%);
+}
+
+@media (max-width: 800px) {
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 5px;
+  }
+  .form-inline input {
+    width: 100%;
+    text-align: center;
+  }
+  .form-inline label {
+    text-align: center;
+    margin: 5px 0;
+  }
+}
+
+/*--------------------- footer ---------------------*/
+.footer-background {
+    background-color: #27aae1;
+    /* filter: brightness(125%); */
+}
+.footer-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  /* border-top: 1px solid rgba(255,255,255,0.3); */
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.logo-footer {
+  width: 150px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-container h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 2;
+  color: #fff;
+}
+
+.footer-container a {
+  font-size: 14px;
+  font-weight: 200;
+  text-decoration: none;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+.fa-twitter, .fa-facebook, .fa-instagram, .fa-youtube {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+.fa-download {
+  margin-right: 10px;
+}
+
+footer {
+    overflow: hidden;
+    background-color: #27aae1;
+    display: block;
+    position: relative;
+    padding: 10px;
+}
+footer p {
+  font-size: 14px;
+  font-weight: 200;
+  color: #fff;
+}
+.copyright {
+  max-width: 1190px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  width: 50%;
+  text-align: left;
+  float: left;
+}
+.right {
+  width: 50%;
+  text-align: right;
+  float: right;
+}
+
+
+@media screen and (max-width: 800px) {
+  .col-4 {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .logo-footer {
+    width: 75%;
+    max-width: 150px;
+    margin: 0;
+    }
+    .right {
+      width: 100%;
+      text-align: center;
+      float: none;
+      display: inline-block;
+    }
+    .left {
+      width: 100%;
+      text-align: center;
+      float: none;
+      display: inline-block;
+    }
+}
